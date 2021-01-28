@@ -1,4 +1,4 @@
 import ReactDOM from 'react-dom';
-import Parent from "./Parent.js";
+import App from "./App.js";
 
-ReactDOM.render(<Parent />, document.querySelector("#root"));
+ReactDOM.render(<App />, document.querySelector("#root"));
