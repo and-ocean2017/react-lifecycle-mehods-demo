@@ -28,7 +28,7 @@ class Counter extends Component {
   }
     
     componentDidMount() {
-        setInterval( () => {
+        this.timerId = setInterval( () => {
             this.setState( ( state ) => {
                 return {
                     counter: state.counter + 1
@@ -43,6 +43,10 @@ class Counter extends Component {
         counter: 0,
       });
     }
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerId);
   }
 }
 
